@@ -5,6 +5,7 @@ const getRandom = (count = 100) => Math.floor(Math.random() * count);
 
 const template = {
     rulesEvenGame: 'Answer "yes" if the number is even, otherwise answer "no".',
+    rulesCalcGame: 'What is the result of the expression?',
     questionQuiz: 'Question: ',
     answer: 'Your answer: ',
     answerWrong: 'is wrong answer ;(. Correct answer was',
