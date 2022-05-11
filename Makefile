@@ -10,6 +10,9 @@ brain-even:
 brain-calc:
 		node bin/brain-calc.js
 
+brain-prime:
+		node bin/brain-prime.js
+
 brain-progression:
 		node bin/brain-calc.js
 
