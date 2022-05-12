@@ -18,7 +18,7 @@ const getCorrectAnswer = (values1, values2) => {
   return number1 + number2;
 };
 
-const startGameEven = () => {
+const startGameEven = (name) => {
   console.log(template.rulesCalcGame);
 
   let i = 0;

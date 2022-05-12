@@ -19,7 +19,7 @@ const genarateProgressive = (summator, length = 10) => {
   };
 };
 
-const startGameEven = () => {
+const startGameEven = (name) => {
   console.log(template.rulesProgressive);
   let i = 0;
   let countCorrectAnswer = 0;

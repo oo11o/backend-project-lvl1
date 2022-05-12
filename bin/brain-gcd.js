@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-
-// import name from '../src/cli.js';
+import name from './brain-games.js';
 import gsdGame from '../games/brain-gcd-game.js';
 
-gsdGame();
+gsdGame(name);

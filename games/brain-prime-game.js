@@ -9,7 +9,7 @@ const getCorrectAnswer = (number) => {
   return number > 1 ? 'yes' : 'no';
 };
 
-const startGameEven = () => {
+const startGameEven = (name) => {
   console.log(template.rulesPrime);
   let i = 0;
   let countCorrectAnswer = 0;

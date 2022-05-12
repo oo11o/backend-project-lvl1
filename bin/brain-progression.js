@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-
-// import name from '../src/cli.js';
+import name from './brain-games.js';
 import progressionGame from '../games/brain-progression-game.js';
 
-progressionGame();
+progressionGame(name);
