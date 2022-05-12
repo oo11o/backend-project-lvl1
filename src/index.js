@@ -6,7 +6,7 @@ const template = {
   rulesGcdGame: 'Find the greatest common divisor of given numbers.',
   rulesProgressive: 'What number is missing in the progression?',
   rulesPrime: 'Answer "yes" if given number is prime. Otherwise answer "no".',
-  questionQuiz: 'Question: ',
+  questionQuiz: 'Question:',
   answer: 'Your answer: ',
   answerWrong: 'is wrong answer ;(. Correct answer was',
   answerWrongGcd: 'Let\'s try again, Sam!',
