@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// import name from '../src/cli.js';
+import name from './brain-games.js';
 import primeGame from '../games/brain-prime-game.js';
 
 primeGame();
