@@ -1,6 +1,3 @@
-import readlineSync from 'readline-sync';
-import name from './cli.js';
-
 const getRandom = (count = 100) => Math.floor(Math.random() * count);
 
 const template = {

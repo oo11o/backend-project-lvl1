@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
 
 const template = {
   welcome: 'Welcome to the Brain Games!',
@@ -6,4 +6,5 @@ const template = {
 };
 
 console.log(template.welcome);
-export default name;
+
+export default template;

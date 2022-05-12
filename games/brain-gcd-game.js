@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import name from '../src/cli.js';
+
 import {
   getRandom, getResultGame, isCorrect, template,
 } from '../src/index.js';
 
 const getCorrectAnswer = (values1, values2) => {
-  while (values1 != 0 && values2 != 0) {
-    if (values1 > values2) {
-      values1 %= values2;
+  let number1 = values1;
+  let number2 = values2;
+  while (number1 !== 0 && number2 !== 0) {
+    if (number1 > number2) {
+      number1 %= number2;
     } else {
-      values2 %= values1;
+      number2 %= number1;
     }
   }
-  return values1 + values2;
+  return number1 + number2;
 };
 
 const startGameEven = () => {

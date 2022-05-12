@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import name from '../src/cli.js';
 import {
   getRandom, getResultGame, isCorrect, template,
 } from '../src/index.js';
