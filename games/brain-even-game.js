@@ -11,13 +11,16 @@ const startGameEven = (name) => {
 
   let i = 0;
   let countCorrectAnswer = 0;
+  let isGaming = true;
 
-  while (i < 3) {
+  while (i < 3 && isGaming) {
     const random = getRandom();
     console.log(`${(template.questionQuiz)} ${random}`);
     const answerUser = readlineSync.question(template.answer);
     const correctAnswer = getCorrectAnswer(random);
-    countCorrectAnswer += isCorrect(answerUser, correctAnswer) ? 1 : 0;
+
+    countCorrectAnswer += isCorrect(correctAnswer, answerUser) ? 1 : isGaming = false; 0;
+
     i += 1;
   }
 
