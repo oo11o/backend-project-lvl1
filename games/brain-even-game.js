@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
   getRandom, getResultGame, isCorrect, template,
@@ -19,7 +18,7 @@ const startGameEven = (name) => {
     const answerUser = readlineSync.question(template.answer);
     const correctAnswer = getCorrectAnswer(random);
 
-    countCorrectAnswer += isCorrect(correctAnswer, answerUser) ? 1 : isGaming = false; 0;
+    countCorrectAnswer += isCorrect(correctAnswer, answerUser) ? 1 : isGaming = false;
 
     i += 1;
   }

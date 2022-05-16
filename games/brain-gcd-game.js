@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
 import {
@@ -25,7 +24,7 @@ const startGameEven = (name) => {
   let countCorrectAnswer = 0;
   let isGaming = true;
 
-  while (i < 3  && isGaming) {
+  while (i < 3 && isGaming) {
     const values1 = getRandom(30);
     const values2 = getRandom(30);
 
@@ -33,7 +32,7 @@ const startGameEven = (name) => {
 
     const answerUser = readlineSync.question(template.answer);
     const correctAnswer = getCorrectAnswer(values1, values2);
-    countCorrectAnswer += isCorrect(answerUser, correctAnswer) ? 1 : isGaming = false; 0;
+    countCorrectAnswer += isCorrect(answerUser, correctAnswer) ? 1 : isGaming = false;
     i += 1;
   }
 

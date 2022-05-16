@@ -22,8 +22,6 @@ const getResultGame = (countCorrectAnswer, name) => {
   console.log(result);
 };
 
-
-
 const isCorrect = (answerUser, correctAnswer) => {
   if (correctAnswer === answerUser) {
     console.log(template.answerCorrect);
