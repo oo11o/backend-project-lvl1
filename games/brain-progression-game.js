@@ -12,7 +12,7 @@ const genarateProgressive = (summator, length = 10) => {
     progressive.push(progressive[i - 1] + summator);
   }
   const correctNum = progressive[skipNum];
-  progressive[skipNum] = '...';
+  progressive[skipNum] = '..';
   return {
     quiz: progressive.join(' '),
     answer: String(correctNum),
