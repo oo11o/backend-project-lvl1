@@ -15,7 +15,7 @@ const getCorrectAnswer = (values1, values2) => {
       number2 %= number1;
     }
   }
-  return number1 + number2;
+  return String(number1 + number2);
 };
 
 const startGameEven = (name) => {
@@ -23,8 +23,9 @@ const startGameEven = (name) => {
 
   let i = 0;
   let countCorrectAnswer = 0;
+  let isGaming = true;
 
-  while (i < 3) {
+  while (i < 3  && isGaming) {
     const values1 = getRandom(30);
     const values2 = getRandom(30);
 
@@ -32,7 +33,7 @@ const startGameEven = (name) => {
 
     const answerUser = readlineSync.question(template.answer);
     const correctAnswer = getCorrectAnswer(values1, values2);
-    countCorrectAnswer += isCorrect(correctAnswer, Number(answerUser)) ? 1 : 0;
+    countCorrectAnswer += isCorrect(answerUser, correctAnswer) ? 1 : isGaming = false; 0;
     i += 1;
   }
 

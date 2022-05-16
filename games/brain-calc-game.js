@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import name from '../src/cli.js';
 import {
   getRandom, getResultGame, isCorrect, template,
 } from '../src/index.js';
@@ -15,7 +14,7 @@ const getCorrectAnswer = ($values1, $values2, operator) => {
     case 2: result = $values1 * $values2; break;
     default: result = NaN;
   }
-  return result;
+  return String(result);
 };
 
 const startGameEven = (name) => {
@@ -23,8 +22,9 @@ const startGameEven = (name) => {
 
   let i = 0;
   let countCorrectAnswer = 0;
+  let isGaming = true;
 
-  while (i < 3) {
+  while (i < 3  && isGaming) {
     const values1 = getRandom(10);
     const values2 = getRandom(10);
     const operator = getRandom(3);
@@ -34,7 +34,7 @@ const startGameEven = (name) => {
     const answerUser = readlineSync.question(template.answer);
     const correctAnswer = getCorrectAnswer(values1, values2, operator);
 
-    countCorrectAnswer += isCorrect(correctAnswer, Number(answerUser)) ? 1 : 0;
+    countCorrectAnswer += isCorrect(correctAnswer, answerUser) ? 1 : isGaming = false; 0;
     i += 1;
   }
 

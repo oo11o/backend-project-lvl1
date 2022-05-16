@@ -15,7 +15,7 @@ const genarateProgressive = (summator, length = 10) => {
   progressive[skipNum] = '...';
   return {
     quiz: progressive.join(' '),
-    answer: correctNum,
+    answer: String(correctNum),
   };
 };
 
@@ -23,14 +23,15 @@ const startGameEven = (name) => {
   console.log(template.rulesProgressive);
   let i = 0;
   let countCorrectAnswer = 0;
-
-  while (i < 3) {
+  let isGaming = true;
+  while (i < 3  && isGaming) {
     const summator = getRandom(9) + 1;
     const task = genarateProgressive(summator);
     console.log(`${(template.questionQuiz)} ${task.quiz}`);
 
     const answerUser = readlineSync.question(template.answer);
-    countCorrectAnswer += isCorrect(task.answer, Number(answerUser)) ? 1 : 0;
+    countCorrectAnswer += isCorrect(answerUser, task.answer) ? 1 : isGaming = false; 0;
+
     i += 1;
   }
   getResultGame(countCorrectAnswer, name);
