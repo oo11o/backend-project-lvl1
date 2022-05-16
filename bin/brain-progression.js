@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import name from '../src/hello.js';
 import progressionGame from '../games/brain-progression-game.js';
 
